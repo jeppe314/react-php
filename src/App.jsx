@@ -3,7 +3,17 @@ import reactLogo from "./assets/react.svg"
 import "./App.css"
 
 function App() {
-    const [count, setCount] = useState(0)
+    const [name, setName] = useState("")
+    const [result, setresult] = useState("")
+
+    const handleChange = (e) => {
+        setName(e.target.value)
+        console.log(e.target)
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    }
 
     return (
         <div className="App">
